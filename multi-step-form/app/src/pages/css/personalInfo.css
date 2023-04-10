@@ -1,0 +1,57 @@
+/* Personal info section */
+.form-section .input-container {
+	margin: 30px 0;
+}
+
+.form-section .input-container label {
+	display: block;
+	margin: 7px 0;
+	color: #1970fc;
+}
+
+.form-section .input-container input {
+	width: 100%;
+	padding: 15px 10px;
+	font-family: Montserrat;
+	border-radius: 7px;
+	border: 1px solid #e6f0ff;
+}
+
+.form-section .input-container span {
+	color: red;
+	display: block;
+	font-size: 13px;
+	margin: 5px 0;
+}
+
+.form .button-container button {
+	padding: 15px 30px;
+	border: 1px solid #1970fc;
+	background-color: #1970fc;
+	color: #fff;
+	font-family: Montserrat;
+	font-size: 15px;
+	border-radius: 10px;
+	cursor: pointer;
+	width: 200px;
+	transition: .3s;
+}
+
+ .form .button-container button.next-btn {
+	position: absolute;
+	bottom: 50px;
+	right: 50px;
+}
+
+.form .button-container button.prev-btn {
+	background-color: inherit;
+	color: #444;
+	border: none;
+	position: absolute;
+	bottom: 50px;
+	left: 0;
+}
+
+.form .button-container button:hover {
+	opacity: .8;
+}

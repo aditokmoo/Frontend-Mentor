@@ -1,0 +1,16 @@
+/* THANK YOU SECTION */
+.thank-you-section {
+	width: 450px;
+	text-align: center;
+	position: relative;
+	top: 100px;
+}
+
+.thank-you-section h1 {
+	margin: 20px 0;
+	font-family: Ubuntu;
+}
+
+.thank-you-section p {
+	line-height: 1.6;
+}

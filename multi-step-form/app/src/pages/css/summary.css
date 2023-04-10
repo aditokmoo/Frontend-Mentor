@@ -1,0 +1,84 @@
+/* google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+/* Summary section */
+.summary-section {
+    background-color: #f5f7fa;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 5px;
+}
+
+/* Plan item */
+.summary-section .plan-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+    padding: 5px 0 15px 0;
+}
+
+/* Left side of plan item */
+.summary-section .plan-item .l-side span {
+    display: block;
+    line-height: 2;
+}
+
+.summary-section .plan-item .l-side .plan-type {
+    color: #313b7d;
+    font-weight: bold;
+}
+
+.summary-section .plan-item .l-side .change {
+    color: #888;
+    text-decoration: underline;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+/* Right side of plan item */
+.summary-section .plan-item .r-side span {
+    color: #313b7d;
+    font-family: Roboto;
+    font-weight: 900;
+    font-size: 17px;
+}
+
+/* ADD-ON ITEM SECTION */
+.summary-section .add-on-item .add-on {
+    margin: 20px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.summary-section .add-on-item .add-on span {
+    font-size: 14px;
+    color: #888;
+}
+
+.summary-section .add-on-item .add-on .add-on-price {
+    color: #313b7d;
+    font-family: Roboto;
+    font-weight: bold;
+}
+
+/* Total section */
+.total {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10px;
+}
+
+.total .total-head {
+    color: #888;
+    font-size: 15px;
+}
+
+.total .total-price {
+    color: #313b7d;
+    font-weight: 900;
+    font-family: Roboto;
+    font-size: 22px;
+}

@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@700&display=swap');
+
+.form {
+	position: relative;
+}
+
+.form-section {
+	display: block;
+	margin: 50px;
+	position: relative;
+	height: 520px;
+}
+
+.form-section-hide {
+	display: none;
+}
+
+.form-section h1 {
+	color: #1970fc;
+	font-family: Ubuntu;
+}
+
+.form-section p {
+	margin: 10px 0;
+	font-size: 14px;
+	color: #888;
+}

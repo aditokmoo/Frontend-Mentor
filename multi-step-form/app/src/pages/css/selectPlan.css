@@ -1,0 +1,125 @@
+/* PLAN SECTION */
+.form-section .plan-section {
+	display: flex;
+	align-items: center;
+	gap: 15px;
+	margin: 40px 0;
+}
+
+.form-section .plan-section .plan {
+	border: 1px solid #ddd;
+	border-radius: 10px;
+	width: 100%;
+	padding: 20px 20px 10px 20px;
+	position: relative;
+	cursor: pointer;
+	transition: .3s;
+}
+
+.form-section .plan-section .plan.active {
+	background-color: #f8f7ff;
+	border: 1px solid #5a07ad;
+}
+
+.form-section .plan-section .plan:hover {
+	background-color: #f8f7ff;
+	border: 1px solid #5a07ad;
+}
+
+.form-section .plan-section .plan .content {
+	color: #1970fc;
+	margin: 30px 0 10px 0;
+}
+
+.form-section .plan-section .plan .content span {
+	margin: 5px 0;
+	display: block;
+	font-size: 13px;
+	color: #888;
+	letter-spacing: 1px;
+}
+
+.form-section .plan-section .plan .content p {
+	color: #1970fc;
+}
+
+/* Switch CheckBox section */
+.switch-btn-container {
+    background-color: #f2f5fa;
+    padding: 20px;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+
+.switch-btn-container span {
+    font-size: 14px;
+    font-weight: bold;
+    color: #a8b1bd;
+}
+
+.switch-btn-container span.active {
+    color: #06408f;
+}
+
+.switch {
+	position: relative;
+	display: inline-block;
+	width: 50px;
+	height: 23px;
+}
+
+.switch input {
+	opacity: 0;
+	width: 0;
+	height: 0;
+}
+
+.form-section .slider {
+	position: absolute;
+	cursor: pointer;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: #ccc;
+	-webkit-transition: .4s;
+	transition: .4s;
+}
+
+.form-section .slider:before {
+	position: absolute;
+	content: "";
+	height: 15px;
+	width: 15px;
+	left: 4px;
+	bottom: 4px;
+	background-color: white;
+	-webkit-transition: .4s;
+	transition: .4s;
+}
+
+.form-section input:checked + .slider {
+	background-color: #033ba6;
+}
+
+.form-section input:focus + .slider {
+	box-shadow: 0 0 1px #033ba6;
+}
+
+.form-section input:checked + .slider:before {
+	-webkit-transform: translateX(26px);
+	-ms-transform: translateX(26px);
+	transform: translateX(26px);
+}
+
+.form-section .slider.round {
+    background-color: #033ba6;
+	border-radius: 34px;
+}
+
+.form-section .slider.round:before {
+	border-radius: 50%;
+}

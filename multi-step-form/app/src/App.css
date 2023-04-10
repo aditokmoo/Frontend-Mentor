@@ -1,0 +1,41 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Montserrat;
+  background-color: #b0c1cf;
+}
+
+/* Header */
+header {
+  background-color: #fff;
+  width: 900px;
+  margin: 100px auto;
+  border-radius: 10px;
+}
+
+header .header {
+  display: flex;
+  width: 100%;
+}
+
+header .header .tab {
+  background-image: url('./img/bg-sidebar-desktop.svg');
+  background-size: cover;
+  background-position: bottom left;
+  width: 33%;
+  height: 600px;
+  margin: 17px;
+  border-radius: 10px;
+}
+
+header .header .form {
+  width: 67%;
+}
