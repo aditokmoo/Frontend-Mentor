@@ -3,6 +3,7 @@ import { useContext } from "react"
 import AppContext from "../context/AppContext"
 // Components
 import { Filter } from "../components/Filter";
+import { Countries } from "../components/Countries";
 
 export const Home = () => {
     const { toggleTheme } = useContext(AppContext);
@@ -12,6 +13,7 @@ export const Home = () => {
             <div className="container">
                 <div className="header-section">
                     <Filter />
+                    <Countries />
                 </div>
             </div>
         </header>

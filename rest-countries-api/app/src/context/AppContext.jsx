@@ -1,9 +1,11 @@
 import { createContext, useEffect, useState } from "react";
+import  axios  from 'axios';
 
 const AppContext = createContext();
 
 export const AppContextProvider = ({ children }) => {
     const [ toggleTheme, setToggleTheme ] = useState(false);
+    const [ countries, setCountries ] = useState([]);
 
     useEffect(() => {
         if(toggleTheme) {
@@ -13,7 +15,20 @@ export const AppContextProvider = ({ children }) => {
         }
       }, [toggleTheme]);
 
+      useEffect(() => {
+        fetchData();
+      }, [])
+
+      // Get Countries Data
+      const fetchData = async () => {
+            const res = await axios.get('https://restcountries.com/v3.1/all');
+            const data = res.data;
+
+            setCountries(data)
+        }
+        
     return <AppContext.Provider value={{
+        countries,
         toggleTheme,
         setToggleTheme
     }}>
