@@ -11,8 +11,14 @@ html {
 
 body {
     background-color: #f2f2f2;
-    font-family: Montserrat;
+    font-family: $primaryFont;
+    font-size: 1.6rem;
     box-sizing: border-box;
+
+    &.dark-theme {
+        background-color: $secondaryBgDarkModeColor;
+        color: $textDarkModeColor;
+    }
 }
 
 .container {

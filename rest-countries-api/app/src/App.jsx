@@ -1,13 +1,23 @@
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
+// Context
+import { AppContextProvider } from './context/AppContext';
+// Components
+import { Navbar } from './components/Navbar';
+// Pages
+import { Home } from './pages/Home';
 // SCSS
 import './scss/main.scss';
 
 function App() {
   return (
-   <>
-    <div className="container">
-      <h1>REST Countries API</h1>
-    </div>
-   </>
+   <Router>
+    <AppContextProvider>
+      <Navbar />
+      <Routes>
+        <Route path='/' element={<Home />} />
+      </Routes>
+    </AppContextProvider>
+   </Router>
   )
 }
 

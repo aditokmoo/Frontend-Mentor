@@ -1,14 +1,16 @@
+// Google Fonts
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap');
+
 // Light Mode vars
-$primaryBgLightModeColor: '#FFFFFF';
-$secondaryBgLightModeColor: '#F3F3F3';
+$primaryBgLightModeColor: hsl(0, 0%, 98%);
+$secondaryBgLightModeColor: hsl(0, 0%, 100%);
 $textLightModeColor: #000;
 
 // Dark Mode vars
-$primaryBgDarkModeColor: #080b12;
-$secondaryBgDarkModeColor: #111726;
-$textDarkModeColor: #fff;
+$primaryBgDarkModeColor: hsl(207, 26%, 17%);
+$secondaryBgDarkModeColor: hsl(209, 23%, 22%);
+$textDarkModeColor: hsl(0, 0%, 100%);
 
 // Fonts
-$titleFont: 'Arial';
-$primaryFont: 'Montserrat';
-$secondaryFont: 'monospace';
+$primaryFont: 'Nunito Sans';
+$secondaryFont: 'Montserrat'
