@@ -8,6 +8,7 @@ export const AppContextProvider = ({ children }) => {
 	const [ countries, setCountries ] = useState([]);
 	const [ originalCountries, setOriginalCountries ] = useState([]);
     const [ countryData, setCountryData ] = useState([]);
+	const [ originalSearchedCountries, setOriginalSearchedCountries ] = useState([]);
 
 	const searchRef = useRef();
 
@@ -61,6 +62,33 @@ export const AppContextProvider = ({ children }) => {
 
 		// Update state with new data
 		setCountries(searchedData)
+		// Original state
+		setOriginalSearchedCountries(searchedData)
+	}
+
+	// Select Filter
+	const selectCountries = (e) => {
+		const selectValue = e.target.value
+		const inputValue = searchRef.current.value;
+		let data;
+
+		if(inputValue === '') {
+			data = originalCountries.filter(country => {
+				if(selectValue === country.region) {
+					return country
+				}
+			})
+		} else {
+			data = originalSearchedCountries.filter(country => {
+				if(selectValue === country.region) {
+					return country
+				}
+			})
+		}
+
+		const selectedData = e.target.value === '' ? originalCountries : data;
+
+		setCountries(selectedData)
 	}
 
 	return (
@@ -71,6 +99,7 @@ export const AppContextProvider = ({ children }) => {
 				toggleTheme,
 				searchRef,
 				searchCountries,
+				selectCountries,
 				setToggleTheme,
                 getCountryData,
 			}}

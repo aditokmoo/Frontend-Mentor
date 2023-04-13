@@ -28,7 +28,7 @@ export const FlagPage = () => {
                                     <div className="row-1">
                                         <div className="col">
                                             <ul>
-                                                <li>Native Name: {Object.values(name.nativeName).map((item , index) => <span key={index}>{item.common}, </span>)}</li>
+                                                <li>Native Name: {name.nativeName && Object.values(name.nativeName).map((item , index) => <span key={index}>{item.common}, </span>)}</li>
                                                 <li>Population: <span>{population.toLocaleString('de-DE')}</span></li>
                                                 <li>Region: <span>{region}</span></li>
                                                 <li>Sub Region: <span>{subregion}</span></li>
@@ -38,8 +38,8 @@ export const FlagPage = () => {
                                         <div className="col">
                                             <ul>
                                                 <li>Top Level Domain: <span>{tld}</span></li>
-                                                <li>Currencies: {Object.values(currencies).map(curr => <span key={curr.name}>{curr.name}</span>)}</li>
-                                                <li>Languages: {Object.values(languages).map(lang => (
+                                                <li>Currencies: {currencies && Object.values(currencies).map(curr => <span key={curr.name}>{curr.name}</span>)}</li>
+                                                <li>Languages: {languages && Object.values(languages).map(lang => (
                                                     <p key={lang}>{lang}, </p>
                                                 ))}</li>
                                             </ul>
