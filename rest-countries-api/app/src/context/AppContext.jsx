@@ -1,4 +1,4 @@
-import { createContext, useEffect, useState } from 'react';
+import { createContext, useEffect, useRef, useState } from 'react';
 import axios from 'axios';
 
 const AppContext = createContext();
@@ -6,7 +6,10 @@ const AppContext = createContext();
 export const AppContextProvider = ({ children }) => {
 	const [ toggleTheme, setToggleTheme ] = useState(false);
 	const [ countries, setCountries ] = useState([]);
+	const [ originalCountries, setOriginalCountries ] = useState([]);
     const [ countryData, setCountryData ] = useState([]);
+
+	const searchRef = useRef();
 
 	useEffect(
 		() => {
@@ -16,7 +19,7 @@ export const AppContextProvider = ({ children }) => {
 				document.body.classList.remove('dark-theme');
 			}
 		},
-		[ toggleTheme ]
+		[ toggleTheme]
 	);
 
 	useEffect(() => {
@@ -29,6 +32,7 @@ export const AppContextProvider = ({ children }) => {
 		const data = res.data;
 
 		setCountries(data);
+		setOriginalCountries(data);
 	};
 
     // Get Single Country Data
@@ -39,12 +43,34 @@ export const AppContextProvider = ({ children }) => {
         setCountryData(data);
     } 
 
+	// Search Filter
+	const searchCountries = (e) => {
+		e.preventDefault();
+		// Get Input Value
+		let inputValue = searchRef.current.value;
+
+		// Filter searched data
+		const data = originalCountries.filter((country) => {
+			if(country.name.common.toLowerCase().startsWith(inputValue.toLowerCase())) {
+				return country
+			}
+		});
+
+		// Display searched data or default data
+		const searchedData = inputValue === '' ? originalCountries : data;
+
+		// Update state with new data
+		setCountries(searchedData)
+	}
+
 	return (
 		<AppContext.Provider
 			value={{
 				countries,
                 countryData,
 				toggleTheme,
+				searchRef,
+				searchCountries,
 				setToggleTheme,
                 getCountryData,
 			}}
