@@ -1,0 +1,88 @@
+.country {
+   a {
+    background-color: $primaryBgLightModeColor;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: .7rem 3rem .7rem 2rem;
+    font-size: 1.5rem;
+    font-size: $secondaryFont;
+    position: absolute;
+    top: 40px;
+    left: 0;
+    transition: .2s;
+    -webkit-box-shadow: 0px 0px 5px -2px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 5px -2px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 5px -2px rgba(0,0,0,0.75);
+
+    &.dark-theme {
+        background-color: $primaryBgDarkModeColor;
+        color: $textDarkModeColor;
+    }
+
+    &:hover {
+        opacity: .6;
+    }
+   }
+
+    .country-section {
+        padding: 150px 0;
+        display: flex;
+        width: 100%;
+        gap: 100px;
+
+        .image {
+            width: 50%;
+            height: 380px;
+        }
+
+        .content {
+            width: 50%;
+            
+            .row-1 {
+                display: flex;
+                justify-content: space-between;
+                margin: 20px 0;
+                width: 100%;
+                gap: 30px;
+
+                .col {
+                    width: 50%;
+
+                    ul li {
+                        margin: 10px 0;
+                    }
+                }
+
+                .col:last-child ul li:last-child {
+                    display: flex;
+                    align-items: center;
+                    flex-wrap: wrap;
+                    gap: 5px;
+                }
+            }
+
+            .row-2 ul li {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                margin-top: 50px;
+                
+                p {
+                    background-color: $primaryBgLightModeColor;
+                    padding: 0.5rem 1rem;
+                    border-radius: 5px;
+                    font-size: 1.4rem;
+                    -webkit-box-shadow: 0px 0px 5px -2px rgba(0,0,0,0.75);
+                    -moz-box-shadow: 0px 0px 5px -2px rgba(0,0,0,0.75);
+                    box-shadow: 0px 0px 5px -2px rgba(0,0,0,0.75);
+
+                    &.dark-theme {
+                        background-color: $primaryBgDarkModeColor;
+                        color: $textDarkModeColor;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -5,6 +5,7 @@ import { AppContextProvider } from './context/AppContext';
 import { Navbar } from './components/Navbar';
 // Pages
 import { Home } from './pages/Home';
+import { FlagPage } from './pages/FlagPage';
 // SCSS
 import './scss/main.scss';
 
@@ -15,6 +16,7 @@ function App() {
       <Navbar />
       <Routes>
         <Route path='/' element={<Home />} />
+        <Route path='/:id' element={<FlagPage />} />
       </Routes>
     </AppContextProvider>
    </Router>
