@@ -30,4 +30,8 @@ img {
     position: relative;
     margin: 0 auto;
     max-width: 130rem;
+
+    @include responsive('small-desktop') {
+        max-width: 95%;
+    }
 }

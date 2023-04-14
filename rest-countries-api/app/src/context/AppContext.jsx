@@ -68,6 +68,7 @@ export const AppContextProvider = ({ children }) => {
 
 	// Select Filter
 	const selectCountries = (e) => {
+		// Get Select and Input Value
 		const selectValue = e.target.value
 		const inputValue = searchRef.current.value;
 		let data;
@@ -86,8 +87,10 @@ export const AppContextProvider = ({ children }) => {
 			})
 		}
 
+		// Display searched or default data
 		const selectedData = e.target.value === '' ? originalCountries : data;
 
+		// Update state with new data
 		setCountries(selectedData)
 	}
 

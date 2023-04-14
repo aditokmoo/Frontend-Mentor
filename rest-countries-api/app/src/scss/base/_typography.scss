@@ -1,6 +1,10 @@
 h1 {
     font-size: 3rem;
     font-weight: 600;
+
+    @include responsive('mobile') {
+        font-size: 2rem;
+    }
 }
 
 h3 {

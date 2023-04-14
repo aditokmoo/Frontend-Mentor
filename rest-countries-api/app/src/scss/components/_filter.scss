@@ -4,6 +4,12 @@
     justify-content: space-between;
     margin: 50px 0;
 
+    @include responsive('mobile') {
+        flex-direction: column;
+        align-items: normal;
+        gap: 10px;
+    }
+
     // Select Filter
     .select-section select {
         padding: 15px;
@@ -13,6 +19,10 @@
         -webkit-box-shadow: 0px 0px 11px -6px rgba(0,0,0,0.75);
         -moz-box-shadow: 0px 0px 11px -6px rgba(0,0,0,0.75);
         box-shadow: 0px 0px 11px -6px rgba(0,0,0,0.75);
+
+        @include responsive('mobile') {
+            width: 100%;
+        }
 
         &.dark-theme {
             background-color: $primaryBgDarkModeColor;
@@ -50,6 +60,10 @@
             -webkit-box-shadow: 0px 0px 11px -6px rgba(0,0,0,0.75);
             -moz-box-shadow: 0px 0px 11px -6px rgba(0,0,0,0.75);
             box-shadow: 0px 0px 11px -6px rgba(0,0,0,0.75);
+
+            @include responsive('mobile') {
+                width: 100%;
+            }
 
             &.dark-theme {
                 background-color: $primaryBgDarkModeColor;

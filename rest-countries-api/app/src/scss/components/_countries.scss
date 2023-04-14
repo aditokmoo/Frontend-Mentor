@@ -4,6 +4,23 @@
     gap: 50px;
     margin-bottom: 100px;
 
+    @include responsive('tablet') {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    @include responsive('small-tablet') {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include responsive('mobile') {
+        grid-template-columns: 1fr;
+        margin: 50px 20px;
+    }
+
+    @include responsive('small-mobile') {
+        margin: 50px 0;
+    }
+
     .country-card {
         background-color: $primaryBgLightModeColor;
         width: 100%;
