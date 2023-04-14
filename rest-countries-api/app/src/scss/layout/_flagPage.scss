@@ -31,13 +31,33 @@
         width: 100%;
         gap: 100px;
 
+        @include responsive('tablet') {
+            flex-direction: column;
+        }
+
+        @include responsive('mobile') {
+            gap: 50px;
+        }
+
         .image {
             width: 50%;
             height: 380px;
+
+            @include responsive('tablet') {
+                width: 100%;
+            }
+
+            @include responsive('small-tablet') {
+                height: inherit;
+            }
         }
 
         .content {
             width: 50%;
+
+            @include responsive('tablet') {
+                width: 100%;
+            }
             
             .row-1 {
                 display: flex;
@@ -46,8 +66,16 @@
                 width: 100%;
                 gap: 30px;
 
+                @include responsive('mobile') {
+                    flex-direction: column;
+                }
+
                 .col {
                     width: 50%;
+
+                    @include responsive('mobile') {
+                        width: 100%;
+                    }
 
                     ul li {
                         margin: 10px 0;
@@ -67,6 +95,11 @@
                 align-items: center;
                 gap: 10px;
                 margin-top: 50px;
+
+                @include responsive('small-mobile') {
+                    flex-direction: column;
+                    align-items: normal;
+                }
                 
                 p {
                     background-color: $primaryBgLightModeColor;
